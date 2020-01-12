@@ -15,7 +15,6 @@ const cities = [
   'Madrid,es',
 ]
 
-
 class App extends Component {
   constructor(){
     super();
@@ -24,7 +23,7 @@ class App extends Component {
 
   handleSelectedLocation = city => {
     this.setState({ city });
-    console.log("handleSelectedLocation" + city);
+    console.log(`handleSelectedLocation ${city}`);
   };
 
   render(){
@@ -32,10 +31,10 @@ class App extends Component {
     return (
       <Grid>
         <Row>
-          <AppBar position="sticky">
+          <AppBar position='sticky'>
             <Toolbar>
-              <Typography variant="title" color='inherit'>
-                WeatherApp
+              <Typography variant='h5' color='inherit'>
+                Weather App
               </Typography>
             </Toolbar>
           </AppBar>
@@ -51,7 +50,7 @@ class App extends Component {
           <Col xs={12} md={6}>
             <Paper elevation={4}>
               <div className="details">
-              {city? <ForecastExtended city={city}></ForecastExtended> : <h1>No se seleccionó ciudad</h1>}
+              {city && <ForecastExtended city={city}></ForecastExtended>}
               </div>
             </Paper>
           </Col>

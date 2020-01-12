@@ -6,21 +6,6 @@ import WeatherData from './WeatherData';
 import transformWeather from './../../services/transformWeather';
 import getUrlWeatherByCity from './../../services/getURLWeatherByCity';
 import './styles.css';
-import {
-    CLOUD,
-    CLOUDY,
-    SUN,
-    RAIN, 
-    SNOW,
-    WINDY,
-} from './../../constants/weather';
-
-const data = {
-    temperature: 25,
-    weatherState: SUN,
-    humidity: 10,
-    wind: '10 m/s',
-};
 
 class WeatherLocation extends Component {
     constructor(props){
@@ -70,6 +55,5 @@ WeatherLocation.propTypes = {
     city: PropTypes.string.isRequired,
     onWeatherLocationClick: PropTypes.func,
 }
-
 
 export default WeatherLocation;
